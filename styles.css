@@ -7,17 +7,18 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; 
+    width: 100%; 
     background-color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden; 
 }
 
 /*Header Styles*/
 
-.Website_Header_Wrapper{
+.Website_Header_Wrapper {
     background-color: white;
     padding: 30px;
-    width: 100%; 
+    width: 100%;
     height: 10%;
     position: relative;
     display: flex;
@@ -25,148 +26,128 @@ html, body {
     align-items: center;
 }
 
-.Website_Body_Wrapper{
-    width: 100%; 
-    height: 2000px;
+.Website_Body_Wrapper {
+    width: 100%;
     position: relative;
+    overflow-x: hidden; 
 }
 
-.Header_Button_S1{
+.Header_Button_S1, .Header_Button_S2 {
     font-weight: 490;
     font-size: 32px;
-
-    width: 250px;
-    height: 100px;
-
     border-radius: 50px;
     border: none;
     background: rgba(255, 255, 255, 0);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: 100ms ease-in-out;
     z-index: 10;
 }
 
-.Header_Button_S1:hover{
-    background-color: black;
-    color: white;
+.Header_Button_S1 {
     width: 250px;
     height: 100px;
-    border-radius: 50px;
+}
+
+.Header_Button_S1:hover {
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 
-.Header_Button_S2{
-    font-weight: 490;
-    font-size: 32px;
-
+.Header_Button_S2 {
     width: 300px;
     height: 100px;
-
-    border-radius: 50px;
-    border: none;
-    background: rgba(255, 255, 255, 0);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: 100ms ease-in-out;
-    z-index: 10;
 }
 
-.Header_Button_S2:hover{
+.Header_Button_S2:hover {
     background-color: black;
     color: white;
-    width: 300px;
-    height: 100px;
-    border-radius: 50px;
     cursor: pointer;
 }
 
 /*Page Styles*/
 
-.Welcome_Page, .About_Page, .Tokenomics_Page{
+.Welcome_Page, .About_Page{
     width: 100%;
     height: 1000px;
     position: relative;
-    padding-bottom: 0; 
-    padding-top: 0; 
-    border: 3px solid blue;
+    padding: 0;
 }
 
-.Prizes_Page, .Socials_Page {
+.Prizes_Page {
     width: 100%;
     height: 1000px;
-    padding-bottom: 0; 
-    padding-top: 0; 
+    padding: 0;
     background-color: black; 
     color: white;
     position: relative; 
-    border: 3px solid blue;
+    transition: height 300ms ease-in-out;
+}
+
+.Socials_Page {
+    width: 100%;
+    height: 700px;
+    padding: 0;
+    background-color: black; 
+    color: white;
+    position: relative; 
+    transition: height 300ms ease-in-out;
+}
+
+.Tokenomics_Page{
+    height: 500px;
+    position: relative;
+    width: 100%;
+    transition: height 300ms ease-in-out;
 }
 
 /*Welcome Page Styles*/
 
+.About_Page_Title, .Tokenomics_Page_Title, .Socials_Page_Title, .Prizes_Page_Title {
+    margin-top: 20px;
+    position: relative;
+    left: 100px;
+    font-size: 64px;
+}
 
 
-.About_Page_Title, .Prizes_Page_Title, .Tokenomics_Page_Title, .Socials_Page_Title{
-    position: absolute;
+.Welcome_Page_Title {
     left: 100px;
     font-size: 64px;
     margin-top: 30px;
 }
 
-.Welcome_Page_Title{
-    left: 100px;
-    font-size: 64px;
-    margin-top: 30px;
-}
-
-.Welcome_Page_Container{
+.Welcome_Page_Container {
     height: auto;
     width: auto;
     padding: 20px;
-
     position: absolute;
     top: 150px;
     left: 100px;
     z-index: 10;
 }
 
-.Welcome_Page_Subtitle{
+.Welcome_Page_Subtitle {
     font-size: 40px;
     font-weight: normal;
     margin-top: 30px;
 }
 
-.Welcome_Page_Buy_Button{
+.Welcome_Page_Buy_Button {
     font-weight: 490;
     font-size: 32px;
-
     height: 100px;
     width: 400px;
-
     border-radius: 50px;
     border: 3px solid black;
     background-color: white;
     margin-top: 30px;
 }
 
-.Welcome_Page_Buy_Button:hover{
-    font-weight: 490;
-    font-size: 32px;
-
-    height: 100px;
-    width: 400px;
-
-    border-radius: 50px;
-    border: 3px solid black;
+.Welcome_Page_Buy_Button:hover {
     background-color: black;
-
     color: white;
     cursor: pointer;
 }
@@ -176,45 +157,131 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     z-index: 1;
 }
 
 /*About Page Styles*/
 
-
-
-.About_Page_Description{
-    position: relative;
-    top: 200px;
+.About_Page_Description {
+    margin-top: 100px;
+    margin-left: 100px;
     font-size: 28px;
+    box-sizing: border-box;
 }
 
 /*Prizes Page Styles*/
 
-.SVG_Container_1{
+.SVG_Container_1 {
     position: absolute;
     bottom: 0;
-    flex-shrink: 0; /* Prevents the SVG container from shrinking */
-    align-self: flex-end; 
     width: 100%;
-    height: 116px; 
-    background-color: white; 
+    height: 116px;
+    background-color: white;
+    overflow: hidden; 
 }
 
-svg{
+svg {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    height: 50px;
+    width: 100px;
+    background-color: rgba(0,0,0,0.8);
+    color: #f2f2f2;
+    font-size: 24px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #747474;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 
 
 
 /*Tokenomics Page Styles*/
 
-.SVG_Container_2{
+.SVG_Container_2 {
     position: absolute;
     width: 200px;
     height: 200px; 
@@ -222,43 +289,95 @@ svg{
     left: calc(50% - 100px);
 }
 
-.Tokenomics_Page_Container, .Prizes_Page_Container, .About_Page_Container, .Socials_Page_Container{
+.Tokenomics_Page_Container, .Prizes_Page_Container, .About_Page_Container, .Socials_Page_Container {
     height: auto;
     width: 100%;
     padding: 20px;
-
     position: absolute;
     top: 50px;
-    
-
-    border: 3px solid green;
 }
 
-.Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3{
+.Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3 {
     height: 100px;
-    width: 30%;
+    width: 25%; 
     border-radius: 20px;
     border: 3px solid black;
     font-size: 32px;
     font-weight: 450;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-
-.Box_Container{
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-    border: 3px solid blue;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    z-index: 1;
 }
 
+.Expanding_Box_1 {
+    left: 0;
+}
 
+.Expanding_Box_2 {
+    left: calc(50% - 12.5%); 
+}
 
+.Expanding_Box_3 {
+    right: 0; 
+}
+
+.Box_Container {
+    position: relative;
+    margin: 50px auto 0 auto;
+    height: auto;
+    width: 90%;
+}
+
+.Tokenomics_Title {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.Tokenomics_Content {
+    display: none;
+    text-align: center;
+    width: 100%;
+}
 
 
 /*Socials Page Styles*/
 
+.Socials_Page_Title {
+    margin-top: 100px; /* Adjust this value to move the title down */
+}
+
+.Socials_Icons {
+    gap: 5%;
+    display: flex;
+    justify-content: flex-start; 
+    position: relative;
+    width: 100%;
+    margin: 50px auto 0 auto;
+    padding-left: 100px; 
+}
+
+.SVG_Container_3 {
+    height: 100px;
+    width: 100px;
+    transition: fill 300ms ease-in-out; 
+    cursor: pointer;
+}
+
+.SVG_Container_3 svg path {
+    fill: white;
+    transition: fill 300ms ease-in-out; 
+}
+
+.SVG_Container_3:hover svg path {
+    fill: #747474; 
+}
+
+.Top_Button {
+    position: absolute;
+    bottom: -200px;
+    left: calc(50% - 50px);
+}
