@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Header Styles*/
+
+.Website_Header_Wrapper{
+    background-color: white;
+    padding: 30px;
+    width: 100%; 
+    height: 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Website_Body_Wrapper{
+    width: 100%; 
+    height: 2000px;
+    position: relative;
+}
+
+.Header_Button_S1{
+    font-weight: 490;
+    font-size: 32px;
+
+    width: 250px;
+    height: 100px;
+
+    border-radius: 50px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 100ms ease-in-out;
+    z-index: 10;
+}
+
+.Header_Button_S1:hover{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.Header_Button_S2{
+    font-weight: 490;
+    font-size: 32px;
+
+    width: 300px;
+    height: 100px;
+
+    border-radius: 50px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 100ms ease-in-out;
+    z-index: 10;
+}
+
+.Header_Button_S2:hover{
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/*Page Styles*/
+
+.Welcome_Page, .About_Page, .Tokenomics_Page{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    padding-bottom: 0; 
+    padding-top: 0; 
+    border: 3px solid blue;
+}
+
+.Prizes_Page, .Socials_Page {
+    width: 100%;
+    height: 1000px;
+    padding-bottom: 0; 
+    padding-top: 0; 
+    background-color: black; 
+    color: white;
+    position: relative; 
+    border: 3px solid blue;
+}
+
+/*Welcome Page Styles*/
+
+
+
+.About_Page_Title, .Prizes_Page_Title, .Tokenomics_Page_Title, .Socials_Page_Title{
+    position: absolute;
+    left: 100px;
+    font-size: 64px;
+    margin-top: 30px;
+}
+
+.Welcome_Page_Title{
+    left: 100px;
+    font-size: 64px;
+    margin-top: 30px;
+}
+
+.Welcome_Page_Container{
+    height: auto;
+    width: auto;
+    padding: 20px;
+
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    z-index: 10;
+}
+
+.Welcome_Page_Subtitle{
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.Welcome_Page_Buy_Button{
+    font-weight: 490;
+    font-size: 32px;
+
+    height: 100px;
+    width: 400px;
+
+    border-radius: 50px;
+    border: 3px solid black;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.Welcome_Page_Buy_Button:hover{
+    font-weight: 490;
+    font-size: 32px;
+
+    height: 100px;
+    width: 400px;
+
+    border-radius: 50px;
+    border: 3px solid black;
+    background-color: black;
+
+    color: white;
+    cursor: pointer;
+}
+
+#vanta-bg {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*About Page Styles*/
+
+
+
+.About_Page_Description{
+    position: relative;
+    top: 200px;
+    font-size: 28px;
+}
+
+/*Prizes Page Styles*/
+
+.SVG_Container_1{
+    position: absolute;
+    bottom: 0;
+    flex-shrink: 0; /* Prevents the SVG container from shrinking */
+    align-self: flex-end; 
+    width: 100%;
+    height: 116px; 
+    background-color: white; 
+}
+
+svg{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+/*Tokenomics Page Styles*/
+
+.SVG_Container_2{
+    position: absolute;
+    width: 200px;
+    height: 200px; 
+    top: -80px;
+    left: calc(50% - 100px);
+}
+
+.Tokenomics_Page_Container, .Prizes_Page_Container, .About_Page_Container, .Socials_Page_Container{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+
+    position: absolute;
+    top: 50px;
+    
+
+    border: 3px solid green;
+}
+
+.Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3{
+    height: 100px;
+    width: 30%;
+    border-radius: 20px;
+    border: 3px solid black;
+    font-size: 32px;
+    font-weight: 450;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.Box_Container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    border: 3px solid blue;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+
+
+
+/*Socials Page Styles*/
+
