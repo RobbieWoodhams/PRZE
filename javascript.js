@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scale: 1.00,
       scaleMobile: 1.00,
       color: 0xfff,
-      color2: 0xff,
+      color: 0xfff,
       backgroundColor: 0xffffff
     });
   });

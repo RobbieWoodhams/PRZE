@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRZE Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.globe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.globe.min.js" defer></script>
     <script src="javascript.js" defer></script>
 </head>
 <body> 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
         <div id="vanta-bg"></div>
+
         <div class="Website_Header_Wrapper" id="Header_Page">
+            <button class="Header_Menu_Button">
+                <div class="SVG_Container_4">
+                    <?xml version="1.0" ?><svg height="12px" version="1.1" viewBox="0 0 18 12" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#000000" id="Core" transform="translate(-87.000000, -342.000000)"><g id="menu" transform="translate(87.000000, 342.000000)"><path d="M0,12 L18,12 L18,10 L0,10 L0,12 L0,12 Z M0,7 L18,7 L18,5 L0,5 L0,7 L0,7 Z M0,0 L0,2 L18,2 L18,0 L0,0 L0,0 Z" id="Shape"/></g></g></g></svg>
+                </div>
+            </button>
             <button class="Header_Button_S1" id="Home_Button">Home</button>
             <button class="Header_Button_S1" id="About_Button">About</button>
             <button class="Header_Button_S1" id="Prizes_Button">Prizes</button>
             <button class="Header_Button_S2" id="Tokenomics_Button">Tokenomics</button>
-            <button class="Header_Button_S2" id="Telegram_Button">Join Telegram</button>
+            <button class="Header_Button_S3" id="Telegram_Button">Join Telegram</button>
+
         </div>
 
         <div class="Website_Body_Wrapper">
@@ -41,7 +48,7 @@
                         Will you be the one to win a prize?</p>
                 </div>
                 <div class="SVG_Container_1">
-                    <svg width="100%" height="auto" viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                    <svg width="100%" height="100%" viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
                         <path d="M55.1148 32.2991L0 46.9486V113H1440V32.2991L1386.89 8.91122L1310.73 3L1261.63 22.5327L1179.96 55.6869L1134.36 85.757L1058.2 102.463L963.006 72.1355L866.305 85.757L837.745 72.1355L807.683 46.9486L758.079 22.5327L649.854 3L537.62 22.5327L463.466 27.4159L391.315 40.0093L347.724 60.5701L300.125 72.1355L235.491 65.4533L185.887 40.0093L108.225 27.4159L55.1148 32.2991Z" fill="black" stroke="black" stroke-width="5"/>
                     </svg>
                 </div>     
@@ -100,10 +107,6 @@
                         <span class="dot" onclick="currentSlide(4)"></span>
                         <span class="dot" onclick="currentSlide(5)"></span>
                       </div>
-
-
-
-
                 </div>
             </div>
 
@@ -165,13 +168,13 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="Top_Button">
-                        <div class="SVG_Container_3" id="Top_Button">
-                            <svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.25 94C0.25 75.458 5.74834 57.3324 16.0497 41.9153C26.3511 26.4982 40.9929 14.482 58.1234 7.38628C75.254 0.29056 94.104 -1.566 112.29 2.05136C130.475 5.66873 147.18 14.5975 160.291 27.7087C173.402 40.8199 182.331 57.5245 185.949 75.7103C189.566 93.896 187.709 112.746 180.614 129.877C173.518 147.007 161.502 161.649 146.085 171.95C130.668 182.252 112.542 187.75 94 187.75C69.136 187.75 45.2903 177.873 27.7087 160.291C10.1272 142.71 0.25 118.864 0.25 94ZM12.75 94C12.75 110.07 17.5152 125.779 26.4431 139.14C35.371 152.502 48.0605 162.916 62.907 169.065C77.7535 175.215 94.0901 176.824 109.851 173.689C125.612 170.554 140.089 162.815 151.452 151.452C162.815 140.089 170.554 125.612 173.689 109.851C176.824 94.0901 175.215 77.7534 169.065 62.9069C162.916 48.0605 152.502 35.3709 139.14 26.4431C125.779 17.5152 110.07 12.75 94 12.75C72.4512 12.75 51.7849 21.3102 36.5476 36.5476C21.3102 51.7849 12.75 72.4511 12.75 94Z" fill="white"/>
-                                <path d="M59.0624 118.187L93.9999 83.3125L128.937 118.187C130.108 119.352 131.693 120.005 133.344 120.005C134.995 120.005 136.579 119.352 137.75 118.187C138.914 117.016 139.567 115.432 139.567 113.781C139.567 112.13 138.914 110.546 137.75 109.375L97.9999 69.625C96.9351 68.5716 95.4978 67.9807 93.9999 67.9807C92.5021 67.9807 91.0647 68.5716 89.9999 69.625L50.2499 109.375C49.0859 110.546 48.4325 112.13 48.4325 113.781C48.4325 115.432 49.0859 117.016 50.2499 118.187C51.421 119.352 53.005 120.005 54.6562 120.005C56.3074 120.005 57.8914 119.352 59.0624 118.187Z" fill="white"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class="Top_Button">
+                    <div class="SVG_Container_3" id="Top_Button">
+                        <svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.25 94C0.25 75.458 5.74834 57.3324 16.0497 41.9153C26.3511 26.4982 40.9929 14.482 58.1234 7.38628C75.254 0.29056 94.104 -1.566 112.29 2.05136C130.475 5.66873 147.18 14.5975 160.291 27.7087C173.402 40.8199 182.331 57.5245 185.949 75.7103C189.566 93.896 187.709 112.746 180.614 129.877C173.518 147.007 161.502 161.649 146.085 171.95C130.668 182.252 112.542 187.75 94 187.75C69.136 187.75 45.2903 177.873 27.7087 160.291C10.1272 142.71 0.25 118.864 0.25 94ZM12.75 94C12.75 110.07 17.5152 125.779 26.4431 139.14C35.371 152.502 48.0605 162.916 62.907 169.065C77.7535 175.215 94.0901 176.824 109.851 173.689C125.612 170.554 140.089 162.815 151.452 151.452C162.815 140.089 170.554 125.612 173.689 109.851C176.824 94.0901 175.215 77.7534 169.065 62.9069C162.916 48.0605 152.502 35.3709 139.14 26.4431C125.779 17.5152 110.07 12.75 94 12.75C72.4512 12.75 51.7849 21.3102 36.5476 36.5476C21.3102 51.7849 12.75 72.4511 12.75 94Z" fill="white"/>
+                            <path d="M59.0624 118.187L93.9999 83.3125L128.937 118.187C130.108 119.352 131.693 120.005 133.344 120.005C134.995 120.005 136.579 119.352 137.75 118.187C138.914 117.016 139.567 115.432 139.567 113.781C139.567 112.13 138.914 110.546 137.75 109.375L97.9999 69.625C96.9351 68.5716 95.4978 67.9807 93.9999 67.9807C92.5021 67.9807 91.0647 68.5716 89.9999 69.625L50.2499 109.375C49.0859 110.546 48.4325 112.13 48.4325 113.781C48.4325 115.432 49.0859 117.016 50.2499 118.187C51.421 119.352 53.005 120.005 54.6562 120.005C56.3074 120.005 57.8914 119.352 59.0624 118.187Z" fill="white"/>
+                        </svg>
                     </div>
                 </div>
             </div>

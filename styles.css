@@ -32,7 +32,7 @@ html, body {
     overflow-x: hidden; 
 }
 
-.Header_Button_S1, .Header_Button_S2 {
+.Header_Button_S1, .Header_Button_S2, .Header_Button_S3 {
     font-weight: 490;
     font-size: 32px;
     border-radius: 50px;
@@ -56,22 +56,134 @@ html, body {
     cursor: pointer;
 }
 
-.Header_Button_S2 {
+.Header_Button_S2, .Header_Button_S3 {
     width: 300px;
     height: 100px;
 }
 
-.Header_Button_S2:hover {
+.Header_Button_S2:hover, .Header_Button_S3:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
 
+
+
+/* Base styles for the Header_Menu_Button */
+.Header_Menu_Button {
+    display: none; /* Hide by default */
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    padding-left: 30px; /* Remove default button padding */
+    align-items: center; /* Center align the SVG vertically */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.SVG_Container_4 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0; /* Remove padding if any */
+}
+
+/* Ensure the SVG has no background or border */
+.SVG_Container_4 svg {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+}
+
+@media screen and (max-width: 1000px) {
+    .Website_Header_Wrapper {
+        background-color: white;
+        padding: 30px;
+        width: 100%;
+        height: 8%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Header_Button_S3 {
+        font-weight: 490;
+        font-size: 32px;
+        border-radius: 50px;
+        border: none;
+        background: rgba(255, 255, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 100ms ease-in-out;
+        z-index: 10;
+        position: relative; /* Ensure it's positioned relatively within the flex container */
+        margin-left: auto; /* Ensure it aligns to the right */
+    }
+
+    .Header_Button_S1, .Header_Button_S2 {
+        display: none;
+    }
+
+    #vanta-bg {
+        display: none;
+    }
+
+    .SVG_Container_4, .Header_Menu_Button {
+        display: flex;
+    }
+
+    .Prizes_Page{
+        height: auto !important;
+        transition: 0.3ms ease-in-out;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .About_Page_Description {
+        font-size: 24px !important;
+        left: 10px !important;
+        padding-inline-end: 10px !important;
+    }
+
+    .About_Page_Title, .Tokenomics_Page_Title, .Socials_Page_Title, .Prizes_Page_Title {
+        left: 10px !important;
+        font-size: 40px !important;
+    }
+
+    .Socials_Icons {
+        margin: 150px auto 0 auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-left: 0 !important; 
+    }
+
+    .Top_Button{
+        bottom: 30px !important;
+    }
+
+    .Welcome_Page_Container {
+        top: 70px !important;
+        left: 0 !important;
+    }
+
+    .Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3 {
+        font-size: 20px !important;
+    }
+}
+
+
 /*Page Styles*/
 
 .Welcome_Page, .About_Page{
     width: 100%;
-    height: 1000px;
+    height: 850px;
     position: relative;
     padding: 0;
 }
@@ -105,12 +217,14 @@ html, body {
 
 /*Welcome Page Styles*/
 
-.About_Page_Title, .Tokenomics_Page_Title, .Socials_Page_Title, .Prizes_Page_Title {
-    margin-top: 20px;
+.About_Page_Title, .Prizes_Page_Title {
+    top: 50px;
     position: relative;
     left: 100px;
     font-size: 64px;
 }
+
+
 
 
 .Welcome_Page_Title {
@@ -153,7 +267,7 @@ html, body {
 }
 
 #vanta-bg {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -161,24 +275,28 @@ html, body {
     z-index: 1;
 }
 
+
+
 /*About Page Styles*/
 
 .About_Page_Description {
-    margin-top: 100px;
-    margin-left: 100px;
+    position: relative;
+    top: 100px;
+    left: 100px;
     font-size: 28px;
     box-sizing: border-box;
+    padding-inline-end: 200px;
 }
 
 /*Prizes Page Styles*/
 
 .SVG_Container_1 {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
-    height: 116px;
-    background-color: white;
-    overflow: hidden; 
+    height: auto; /* Ensure the height adjusts to maintain aspect ratio */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 svg {
@@ -189,6 +307,7 @@ svg {
 
 /* Slideshow container */
 .slideshow-container {
+    top: 50px;
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -251,10 +370,11 @@ svg {
   
   /* The dots/bullets/indicators */
   .dot {
+    position: relative;
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 50px 2px;
     background-color: white;
     border-radius: 50%;
     display: inline-block;
@@ -281,6 +401,13 @@ svg {
 
 /*Tokenomics Page Styles*/
 
+.Tokenomics_Page_Title{
+    top: 100px;
+    position: relative;
+    left: 100px;
+    font-size: 64px;
+}
+
 .SVG_Container_2 {
     position: absolute;
     width: 200px;
@@ -289,13 +416,7 @@ svg {
     left: calc(50% - 100px);
 }
 
-.Tokenomics_Page_Container, .Prizes_Page_Container, .About_Page_Container, .Socials_Page_Container {
-    height: auto;
-    width: 100%;
-    padding: 20px;
-    position: absolute;
-    top: 50px;
-}
+
 
 .Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3 {
     height: 100px;
@@ -326,7 +447,7 @@ svg {
 
 .Box_Container {
     position: relative;
-    margin: 50px auto 0 auto;
+    margin: 120px auto 0 auto;
     height: auto;
     width: 90%;
 }
@@ -347,7 +468,11 @@ svg {
 /*Socials Page Styles*/
 
 .Socials_Page_Title {
-    margin-top: 100px; /* Adjust this value to move the title down */
+    margin-inline-end: 100px;
+    top: 100px;
+    position: relative;
+    left: 100px;
+    font-size: 64px;
 }
 
 .Socials_Icons {
@@ -356,7 +481,7 @@ svg {
     justify-content: flex-start; 
     position: relative;
     width: 100%;
-    margin: 50px auto 0 auto;
+    margin: 160px auto 0 auto;
     padding-left: 100px; 
 }
 
@@ -378,6 +503,8 @@ svg {
 
 .Top_Button {
     position: absolute;
-    bottom: -200px;
+    bottom: 50px;
     left: calc(50% - 50px);
 }
+
+
