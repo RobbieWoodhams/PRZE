@@ -16,7 +16,7 @@ html, body {
 /*Header Styles*/
 
 .Website_Header_Wrapper {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     padding: 30px;
     width: 100%;
     height: 10%;
@@ -78,7 +78,7 @@ html, body {
     left: 0;
     background: none; /* Remove default button background */
     border: none; /* Remove default button border */
-    padding-left: 30px; /* Remove default button padding */
+    margin-left: 20px; /* Remove default button padding */
     align-items: center; /* Center align the SVG vertically */
     cursor: pointer; /* Change cursor to pointer */
 }
@@ -90,18 +90,18 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0; /* Remove padding if any */
+    padding: 0; 
 }
 
-/* Ensure the SVG has no background or border */
+
 .SVG_Container_4 svg {
-    background: none; /* Remove background */
-    border: none; /* Remove border */
+    background: none; 
+    border: none; 
 }
 
 @media screen and (max-width: 1000px) {
     .Website_Header_Wrapper {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0) !important;
         padding: 30px;
         width: 100%;
         height: 8%;
@@ -179,6 +179,96 @@ html, body {
 }
 
 
+@media screen and (max-width: 480px) {
+    .Website_Header_Wrapper {
+        background-color: white;
+        padding: 15px;
+        width: 100%;
+        height: 7%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Welcome_Page_Buy_Button {
+        height: 80px !important;
+        width: 300px !important;
+    }
+
+    .Welcome_Page_Subtitle {
+        font-size: 28px !important;
+    }
+
+    .Header_Button_S3 {
+        width: 180px !important;
+        height: 60px !important;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        
+    }
+
+    .Header_Button_S3:hover {
+        background-color: #747474;
+    }
+
+    .About_Page_Title {
+        top: -75px !important;
+        z-index: 15px !important;
+    }
+
+    .About_Page_Description {
+        top: -55px !important;
+        margin-right: 10px;
+        font-size: 20px ;
+    }
+
+    .SVG_Container_4 {
+        height: 30px;
+        width: 30px;
+        z-index: 15px !important;
+    }
+
+    .Header_Menu_Button{
+        z-index: 15px !important;
+    }
+
+    .About_Page{
+        height: 700px !important;
+    }
+
+    .Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3 {
+        font-size: 18px !important;
+        font-weight: 420 !important;
+    }
+
+    .Socials_Page{
+        height: 500px !important;
+    }
+
+    #vanta-bg {
+        display: inline;
+        z-index: -1px !important;
+    }
+
+
+    .SVG_Container_3 {
+        height: 80px !important;
+        width: 80px !important;
+    }
+
+    .Top_Button {
+        left: calc(50% - 40px) !important;
+    }
+
+    .About_Page_Title, .Prizes_Page_Title, .Socials_Page_Title, .Tokenomics_Page_Title{
+        font-size: 36px !important;
+        
+    }
+}
+
+
 /*Page Styles*/
 
 .Welcome_Page, .About_Page{
@@ -187,6 +277,8 @@ html, body {
     position: relative;
     padding: 0;
 }
+
+
 
 .Prizes_Page {
     width: 100%;
@@ -222,9 +314,8 @@ html, body {
     position: relative;
     left: 100px;
     font-size: 64px;
+    z-index: 15px;
 }
-
-
 
 
 .Welcome_Page_Title {
@@ -272,7 +363,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 1000px;
-    z-index: 1;
+    z-index: -1px;
 }
 
 
@@ -286,6 +377,7 @@ html, body {
     font-size: 28px;
     box-sizing: border-box;
     padding-inline-end: 200px;
+    z-index: 15px;
 }
 
 /*Prizes Page Styles*/
@@ -420,7 +512,7 @@ svg {
 
 .Expanding_Box_1, .Expanding_Box_2, .Expanding_Box_3 {
     height: 100px;
-    width: 25%; 
+    width: 30%; 
     border-radius: 20px;
     border: 3px solid black;
     font-size: 32px;
@@ -438,7 +530,7 @@ svg {
 }
 
 .Expanding_Box_2 {
-    left: calc(50% - 12.5%); 
+    left: calc(50% - 15%); 
 }
 
 .Expanding_Box_3 {

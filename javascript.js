@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scale: 1.00,
       scaleMobile: 1.00,
       color: 0xfff,
-      color: 0xfff,
+      color2: 0xfff,
       backgroundColor: 0xffffff
     });
   });
@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             box.style.transition = 'height 300ms ease-in-out, width 300ms ease-in-out, left 300ms ease-in-out';
             box.style.height = '100px';
-            box.style.width = '25%';
+            box.style.width = '30%';
             if (box.classList.contains('Expanding_Box_2')) {
-                box.style.left = 'calc(50% - 12.5%)'; 
+                box.style.left = 'calc(50% - 15%)'; 
             }
             if (title) {
                 title.style.display = 'block';
