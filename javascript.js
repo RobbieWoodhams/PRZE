@@ -100,6 +100,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const instagram = document.getElementById("Instagram_Icon");
     const buy = document.getElementById("Buy_PRZE_Button");
     const learn = document.getElementById("Learn_More_Button");
+    const menu = document.querySelector(".Header_Menu_Button"); // Corrected selector
+    const overlayMenu = document.querySelector(".Overlay_Menu");
+    const exit = document.querySelector(".Overlay_Menu_Exit"); // Corrected selector
+
+    document.getElementById("OM_Home").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        document.getElementById('Welcome_Page').scrollIntoView({behavior: 'smooth'});
+    });
+
+    document.getElementById("OM_About").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        document.getElementById('About_Page').scrollIntoView({behavior: 'smooth'});
+    });
+
+    document.getElementById("OM_Prizes").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        document.getElementById('Prizes_Page').scrollIntoView({behavior: 'smooth'});
+    });
+
+    document.getElementById("OM_Prizes_2").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        window.location.href = "prizes.html";
+    });
+
+    document.getElementById("OM_Tokenomics").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        document.getElementById('Tokenomics_Page').scrollIntoView({behavior: 'smooth'});
+    });
+
+    menu.addEventListener('click', () => {
+        overlayMenu.style.display = "flex";
+    });
+
+    exit.addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+    });
 
     learn.addEventListener('click', () => {
         window.location.href = "prizes.html";

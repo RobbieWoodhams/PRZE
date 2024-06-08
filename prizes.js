@@ -32,6 +32,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const calculator = document.getElementById("Calculator_Button");
     const inputBox = document.querySelector('.Input_Field');
     const outputBox = document.querySelector('.Output_Field');
+    const menu = document.querySelector(".Header_Menu_Button"); // Corrected selector
+    const overlayMenu = document.querySelector(".Overlay_Menu");
+    const exit = document.querySelector(".Overlay_Menu_Exit"); // Corrected selector
+
+    document.getElementById("OM_Home").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        window.location.href = "index.html#Welcome_Page";
+    });
+
+    document.getElementById("OM_About").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        window.location.href = "index.html#About_Page";
+    });
+
+    document.getElementById("OM_Prizes").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        window.location.href = "index.html#Prizes_Page";
+    });
+
+    document.getElementById("OM_Tokenomics").addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+        window.location.href = "index.html#Tokenomics_Page";
+    });
+
+    menu.addEventListener('click', () => {
+        overlayMenu.style.display = "flex";
+    });
+
+    exit.addEventListener('click', () => {
+        overlayMenu.style.display = "none";
+    });
 
     home.addEventListener('click', () => {
         window.location.href = "index.html#Welcome_Page";
