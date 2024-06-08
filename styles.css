@@ -310,7 +310,10 @@ html, body {
 
     .About_Page_Title, .Prizes_Page_Title, .Socials_Page_Title, .Tokenomics_Page_Title{
         font-size: 36px !important;
-        
+    }
+
+    .Learn_More_Button{
+        left: calc(50%-150px) !important;
     }
 }
 
