@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const twitter = document.getElementById("Twitter_Icon");
     const instagram = document.getElementById("Instagram_Icon");
     const buy = document.getElementById("Buy_PRZE_Button");
+    const learn = document.getElementById("Learn_More_Button");
+
+    learn.addEventListener('click', () => {
+        window.location.href = "prizes.html";
+    });
 
     home.addEventListener('click', () => {
         document.getElementById('Welcome_Page').scrollIntoView({behavior: 'smooth'});

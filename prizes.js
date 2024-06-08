@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Simulated market cap value for testing
-    const simulatedMarketCap = 1000000; // Change this value to test different market caps
+    const simulatedMarketCap = 456765; // Change this value to test different market caps
 
     const progressBar = document.querySelector('.progress-bar2');
     const mcdata = document.querySelector('.marketcap-data');
@@ -23,3 +23,39 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProgressBar(simulatedMarketCap);
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById("Home_Button");
+    const about = document.getElementById("About_Button");
+    const prizes = document.getElementById("Prizes_Button");
+    const tokenomics = document.getElementById("Tokenomics_Button");
+    const calculator = document.getElementById("Calculator_Button");
+    const inputBox = document.querySelector('.Input_Field');
+    const outputBox = document.querySelector('.Output_Field');
+
+    home.addEventListener('click', () => {
+        window.location.href = "index.html#Welcome_Page";
+    });
+
+    about.addEventListener('click', () => {
+        window.location.href = "index.html#About_Page";
+    });
+
+    prizes.addEventListener('click', () => {
+        window.location.href = "index.html#Prizes_Page";
+    });
+
+    tokenomics.addEventListener('click', () => {
+        window.location.href = "index.html#Tokenomics_Page";
+    });
+
+    calculator.addEventListener('click', () => {
+        const inputValue = inputBox.value;
+        const totalSupply = 100000000;
+
+        const probability = (inputValue / totalSupply) * 100;
+
+
+        outputBox.value = probability + "%";
+    });
+});
