@@ -174,6 +174,16 @@ html, body {
         display: flex;
     }
 
+    .Description_1{
+        font-size: 24px !important; 
+        top: 150px !important;
+    }
+
+    .Description_2 {
+        font-size: 24px !important; 
+        top: 70px !important;
+    }
+
 }
 
 
@@ -218,85 +228,75 @@ html, body {
         z-index: 15px !important;
     }
 
+    .Prizes_Container {
+        position: absolute !important;
+        top: 0px !important;
+    }
+
 }
 
 
 .container-2 {
     top: 50px;
     position: relative;
-    width: auto; /* Responsive width */
-    max-width: 1505px;
-    height: auto;
+    max-width: 98%; /* Use a relative unit for max-width */
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    padding: 10px; /* Add some padding for better spacing */
 }
 
-.box1{
-    width: 1500px;
-    height: 150px;
+.box1 {
+    width: 100%; /* Make the width relative */
+    height: 170px;
     background-color: #3C9494;
     border-radius: 50px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.box2{
-    width: calc(100% - 200px);
-    height: calc(100% - 30px);
+.box2 {
+    width: 100%;
+    height: 100px;
     background-color: white;
-    border-radius: calc(50px - 3px);
-    position: absolute;
+    border-radius: 40px;
+    position: relative;
     top: 15px;
-    left: 185px;
+    left: 0; /* Remove the fixed left positioning */
     overflow: hidden;
     padding: 10px;
     box-sizing: border-box;
 }
 
-.progress-bar2{
-    height: 100%;
+.progress-bar2 {
+    width: 100%; /* Make the width relative */
+    height: 100%; /* Adjust the height for better scaling */
     background-color: #3C9494;
-    border-radius: 47.7px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 10px solid white; /* White outline */
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid white; /* Adjust border for better scaling */
     box-sizing: border-box;
     transition: width 0.5s; /* Smooth transition for width changes */
 }
 
-.market-data{
-    flex-direction: column;
-    top: 30px;
-    left: 15px;
-    position: absolute;
+.market-data {
+    display: flex;
+    flex-direction: row;
+    top: 0; /* Adjust positioning */
+    left: 1%;
+    position: relative;
     color: white;
-    font-size: 28px;
+    font-size: 1.5em; /* Use relative units for font size */
     font-weight: bold;
+    gap: 8px;
 }
 
 
-@media screen and (max-width: 1510px){
-    .container-2{
-        transform: rotate(90deg);
-        transform-origin: center center;
-        position: absolute;
-        top: 800px;
-        left: 10px;
-        display: flex;
-        padding-inline-end: 50px;
-    }
 
-    .market-data{
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        font-size: 24px;
-        position: absolute;
-        top: 50%;
-        left: 7%;
-        transform: translate(-50%, -50%) rotate(-90deg);
-        text-align: center;
-    }
-}
+
 
 /* Section 1 */
 
@@ -316,6 +316,7 @@ html, body {
     top: 200px;
     left: 100px;
     position: relative;
+    transition: 3ms ease;
 }
 
 .SVG_Container_1{
@@ -378,62 +379,67 @@ svg {
     position: relative; 
 }
 
-.SVG_Container_122{
-    width: 100px;
-    height: 100px;
+.SVG_Container_122, .SVG_Container_12 {
+    width: 10%; /* Use percentage for responsiveness */
+    max-width: 100px; /* Ensure a maximum size */
+    height: auto; /* Allow height to scale with width */
     position: absolute;
+    top: 200px;
+}
+
+.SVG_Container_122 {
     right: 0;
-    top: 200px;
 }
 
-.SVG_Container_12{
-    width: 100px;
-    height: 100px;
-    position: absolute;
+.SVG_Container_12 {
+    left: 0;
     transform: rotate(180deg);
-    top: 200px;
 }
 
-.SVG_Container_12:hover, .SVG_Container_122:hover{
+.SVG_Container_12:hover, .SVG_Container_122:hover {
     fill: #747474;
     cursor: pointer;
 }
 
-.Prizes_Container{
+.Prizes_Container {
     width: 100%;
-    height: 550px;
-    top: 300px;
+    height: auto; /* Allow height to adjust */
+    top: 200px;
     position: relative;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.Prizes_Container_2{
+.Prizes_Container_2 {
     width: 80%;
-    height: 100%;
-    
+    height: auto; /* Allow height to adjust */
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box;
 }
 
-.Prizes_Title{
+.Prizes_Title {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 40px; /* Use viewport width for responsiveness */
+    text-align: center; /* Center the title */
 }
 
-.Prizes_Content{
-    font-size: 36px;
-    top: 50px;
-    left: 50px;
+.Prizes_Content {
+    font-size: 24px; /* Use viewport width for responsiveness */
     position: relative;
+    margin-top: 50px; /* Add some space below the title */
 }
 
-.Picture_Container{
-    width: 700px;
-    height: 400px;
+.Picture_Container {
+    width: 100%; /* Make it flexible */
+    max-width: 700px; /* Set a maximum width */
+    height: auto; /* Allow height to adjust */
+    aspect-ratio: 16/9; /* Maintain a 16:9 aspect ratio */
     border-radius: 50px;
-    top: 0;
-    right: 0;
-    position: absolute;
+    margin-top: 50px; /* Add some space below the content */
+    position: relative;
     border: 3px solid black;
     overflow: hidden;
 }
@@ -445,11 +451,10 @@ svg {
     border-radius: inherit; /* Apply the same border radius to the image */
 }
 
-.Separator{
+.Separator {
     height: 5px;
     width: 80%;
-    bottom: 0;
-    position: relative;
+    margin-top: 100px; /* Add some space above the separator */
     background-color: black;
     margin-left: auto;
     margin-right: auto;
@@ -457,75 +462,87 @@ svg {
 
 .Calculator_Container {
     width: 80%;
-    height: 900px;
+    max-width: 1000px; /* Limit the maximum width */
+    height: auto; /* Allow height to adjust */
     position: relative;
     margin-left: auto;
     margin-right: auto;
     top: 400px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px;
 }
 
 .Calculator_Title {
     font-weight: bold;
     font-size: 40px;
     margin-top: 0; /* Ensure there's no extra margin at the top */
+    text-align: center; /* Center the title */
 }
 
 .Calculator_Content {
-    font-size: 36px;
-    margin-top: 10px; /* Add margin for spacing */
-    width: 50%;
+    font-size: 24px;
+    margin-top: 30px; /* Add margin for spacing */
+    width: 100%;
+    text-align: center; /* Center the content */
+    margin-bottom: 20px; /* Add some space below */
 }
 
-.Calculator_Casing{
+.Calculator_Casing {
     width: 100%;
-    height: 600px;
+    margin-top: 30px;
     border-radius: 50px;
     border: 3px solid black;
-    position: absolute;
-    bottom: 0;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column; /* Arrange children in a column */
     justify-content: space-between;
+    gap: 20px; /* Add some space between elements */
 }
 
-.Calculator_Input_Container, .Calculator_Output_Container{
+.Calculator_Input_Container, .Calculator_Output_Container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    width: 100%;
 }
 
-.Calculator_Indicator{
-    font-size: 36px;
+.Calculator_Indicator {
+    font-size: 24px;
     font-weight: 400;
     justify-content: center; /* Ensure the text is centered */
     display: flex; /* Use flexbox to center the text */
     align-items: center;
+    margin-bottom: 10px; /* Add some space below the indicator */
 }
 
-.Input_Box, .Output_Box{
+.Input_Box, .Output_Box {
     border: 3px solid black;
-    border-radius: 40px;
-    height: 150px;
-    width: 750px;
+    border-radius: 20px;
+    height: 50px;
+    width: 100%;
+    max-width: 750px; /* Limit the maximum width */
     position: relative;
-    padding: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.Calculator_Button{
+.Calculator_Button {
+    margin-top: 20px;
     width: 100%;
-    height: 150px;
-    border-radius: 40px;
+    height: 50px;
+    border-radius: 20px;
     border: 3px solid black;
     background-color: white;
     color: black;
-    font-size: 40px;
-    position: relative; /* Position absolute to place at the bottom */
+    font-size: 24px;
     box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Calculator_Button:hover{
+.Calculator_Button:hover {
     background-color: black;
     color: white;
     cursor: pointer;
@@ -538,7 +555,7 @@ svg {
     outline: none; /* Remove default outline */
     padding: 10px; /* Add padding inside the input */
     box-sizing: border-box; /* Include padding in the width and height */
-    font-size: 36px; /* Adjust font size */
+    font-size: 18px; /* Adjust font size */
     border-radius: inherit;
 }
 

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const progressBar = document.querySelector('.progress-bar2');
     const mcdata = document.querySelector('.marketcap-data');
+    const box2 = document.querySelector('.box2');
 
     // Define the maximum market cap for 100% width
     const maxMarketCap = 1000000; // Example maximum market cap
@@ -11,16 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateProgressBar(marketCap) {
         // Calculate the width as a percentage of the maximum market cap
         const progressPercentage = (marketCap / maxMarketCap) * 100;
-        // Calculate the width in pixels (assuming the max width of the progress bar is 1235px)
-        const progressBarWidth = (progressPercentage / 100) * 1300;
-
-        // Set the width of the progress bar
-        progressBar.style.width = `${progressBarWidth}px`;
-        mcdata.textContent = "$" + simulatedMarketCap;
+        // Set the width of the progress bar as a percentage of the parent container
+        progressBar.style.width = `${progressPercentage}%`;
+        mcdata.textContent = "$" + simulatedMarketCap.toLocaleString();
     }
 
     // Update the progress bar with the simulated market cap
     updateProgressBar(simulatedMarketCap);
+
+    // Add an event listener to update the progress bar on window resize
+    window.addEventListener('resize', function() {
+        updateProgressBar(simulatedMarketCap);
+    });
 });
 
 
