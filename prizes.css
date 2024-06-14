@@ -176,13 +176,34 @@ html, body {
 
     .Description_1{
         font-size: 24px !important; 
-        top: 150px !important;
     }
 
     .Description_2 {
         font-size: 24px !important; 
-        top: 70px !important;
+        top: -70px !important;
     }
+
+    .Socials_Page {
+        height: 500px !important; /* Ensure the container takes the full height of the viewport */
+    }
+    
+    .Socials_Page_Title {
+        font-size: 36px !important;
+        text-align: center !important; /* Center the text within the element */
+        margin-bottom: 50px !important; /* Add some space below the title */
+        left: 50px !important;
+    }
+    
+    .Socials_Icons{
+        text-align: center !important;
+    }
+
+
+    .SVG_Container_3 {
+        height: 80px !important;
+        width: 80px !important;
+    }
+
 
 }
 
@@ -228,10 +249,7 @@ html, body {
         z-index: 15px !important;
     }
 
-    .Prizes_Container {
-        position: absolute !important;
-        top: 0px !important;
-    }
+
 
 }
 
@@ -286,7 +304,7 @@ html, body {
     display: flex;
     flex-direction: row;
     top: 0; /* Adjust positioning */
-    left: 1%;
+    left: calc(50% - 120px);
     position: relative;
     color: white;
     font-size: 1.5em; /* Use relative units for font size */
@@ -310,11 +328,13 @@ html, body {
 }
 
 .Description_1{
+    width: 100%;
     font-size: 28px;
     box-sizing: border-box;
-    padding-inline-end: 200px;
-    top: 200px;
-    left: 100px;
+    width: 100%; /* Ensure the width takes full available space */
+    max-width: calc(100% - 40px); /* Ensure 20px padding on either side */
+    text-align: center; /* Center text inside the container */
+    margin: 120px 20px;
     position: relative;
     transition: 3ms ease;
 }
@@ -361,9 +381,11 @@ svg {
 .Description_2{
     font-size: 28px;
     box-sizing: border-box;
-    padding-inline-start: 200px;
-    top: 200px;
-    right: 100px;
+    width: 100%; /* Ensure the width takes full available space */
+    max-width: calc(100% - 100px); /* Ensure 20px padding on either side */
+    text-align: center; /* Center text inside the container */
+    margin: 0px 50px;
+    padding-top: 150px;
     position: relative;
     color: white;
 }
@@ -372,7 +394,7 @@ svg {
 
 .Section_3{
     width: 100%;
-    height: 2000px;
+    height: 1800px;
     padding: 0;
     background-color: white; 
     color: black;
@@ -418,6 +440,7 @@ svg {
     margin-right: auto;
     padding: 20px; /* Add padding for better spacing */
     box-sizing: border-box;
+    display: none;
 }
 
 .Prizes_Title {
@@ -448,7 +471,6 @@ svg {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-    border-radius: inherit; /* Apply the same border radius to the image */
 }
 
 .Separator {
@@ -467,7 +489,7 @@ svg {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 400px;
+    top: 300px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     padding: 20px;
 }

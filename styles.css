@@ -183,6 +183,7 @@ html, body {
         height: 80px !important;
         width: 300px !important;
         bottom: 60px !important;
+        left: calc(50% - 150px) !important;
     }
 
 }
@@ -312,9 +313,9 @@ html, body {
         font-size: 36px !important;
     }
 
-    .Learn_More_Button{
-        left: calc(50%-150px) !important;
-    }
+
+
+
 }
 
 
@@ -331,8 +332,8 @@ html, body {
 
 .Prizes_Page {
     width: 100%;
-    height: 1100px;
-    padding: 0;
+    height: auto;
+    padding-bottom: 50px;
     background-color: black; 
     color: white;
     position: relative; 

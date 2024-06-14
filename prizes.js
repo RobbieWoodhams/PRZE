@@ -26,6 +26,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const marketCaps = [
+    'market_cap_10000',
+    'market_cap_50000',
+    'market_cap_100000',
+    'market_cap_175000',
+    'market_cap_250000',
+    'market_cap_350000',
+    'market_cap_500000',
+    'market_cap_750000',
+    'market_cap_1000000'
+];
+let currentIndex = 0;
+
+document.getElementById('right_button').addEventListener('click', function() {
+    document.getElementById(marketCaps[currentIndex]).style.display = 'none';
+    currentIndex = (currentIndex + 1) % marketCaps.length;
+    document.getElementById(marketCaps[currentIndex]).style.display = 'block';
+});
+
+document.getElementById('left_button').addEventListener('click', function() {
+    document.getElementById(marketCaps[currentIndex]).style.display = 'none';
+    currentIndex = (currentIndex - 1 + marketCaps.length) % marketCaps.length;
+    document.getElementById(marketCaps[currentIndex]).style.display = 'block';
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const home = document.getElementById("Home_Button");
